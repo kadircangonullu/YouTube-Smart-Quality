@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Arka Planda Düşük Kalite",
+  "version": "1.0.0",
+  "description": "YouTube videosu sekme değiştirince veya pencere odağını kaybedince kaliteyi otomatik 144p'ye düşürür, geri gelince eski kaliteye döner.",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "YouTube Arka Planda Düşük Kalite"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<title>YouTube Arka Planda Düşük Kalite</title>
+<style>
+  body {
+    width: 240px;
+    font-family: -apple-system, Segoe UI, Roboto, sans-serif;
+    padding: 14px;
+    color: #222;
+  }
+  h1 {
+    font-size: 14px;
+    margin: 0 0 10px 0;
+  }
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  .desc {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.4;
+  }
+  label.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+  }
+  label.switch input { display: none; }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background-color: #ccc;
+    transition: .2s;
+    border-radius: 22px;
+  }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .2s;
+    border-radius: 50%;
+  }
+  input:checked + .slider { background-color: #d32f2f; }
+  input:checked + .slider:before { transform: translateX(18px); }
+</style>
+</head>
+<body>
+  <h1>Arka Planda 144p</h1>
+  <div class="row">
+    <span>Etkin</span>
+    <label class="switch">
+      <input type="checkbox" id="toggle" />
+      <span class="slider"></span>
+    </label>
+  </div>
+  <p class="desc">Sekmeden ayrılınca veya pencere odağı kaybolunca YouTube video kalitesi otomatik 144p yapılır; geri dönünce eski kaliteye döner.</p>
+  <script src="popup.js"></script>
+</body>
+</html>
